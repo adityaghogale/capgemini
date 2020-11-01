@@ -1,0 +1,311 @@
+2020-11-01 10:25:45.850  WARN 6396 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:25:45.867  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:25:47.208  WARN 6396 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-01 10:25:48.423  WARN 6396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:25:48.939  WARN 6396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:25:49.126  WARN 6396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:25:50.344  WARN 6396 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:25:51.837  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 8.626 seconds (JVM running for 9.694)
+2020-11-01 10:26:44.715  WARN 6396 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 10:27:04.646  WARN 6396 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.RetryableException: Read timed out executing POST http://logindataprovider/register]
+2020-11-01 10:30:45.104  WARN 6396 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604206845104, current=DOWN, previous=UP]
+2020-11-01 10:30:50.090  WARN 6396 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:30:50.093  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:30:51.124  WARN 6396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:30:51.188  WARN 6396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:30:51.692  WARN 6396 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:30:52.011  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.257 seconds (JVM running for 309.866)
+2020-11-01 10:31:57.402  WARN 6396 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604206917402, current=DOWN, previous=UP]
+2020-11-01 10:32:02.355  WARN 6396 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:32:02.358  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:32:03.304  WARN 6396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:32:03.351  WARN 6396 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:32:03.841  WARN 6396 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:32:04.156  INFO 6396 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.118 seconds (JVM running for 382.012)
+2020-11-01 10:32:09.602  WARN 6396 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604206929602, current=DOWN, previous=UP]
+2020-11-01 10:32:34.324  WARN 4232 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:32:34.330  INFO 4232 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:32:35.638  WARN 4232 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-01 10:32:36.812  WARN 4232 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:32:37.333  WARN 4232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:32:37.523  WARN 4232 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:32:38.632  WARN 4232 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:32:40.133  INFO 4232 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 8.49 seconds (JVM running for 9.601)
+2020-11-01 10:34:00.845  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604207040845, current=DOWN, previous=UP]
+2020-11-01 10:34:00.955  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RibbonApacheHttpClientConfiguration.connectionManagerTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 10:34:00.958  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [NFLoadBalancer-PingTimer-logindataprovider] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 10:34:00.961  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-11-01 10:34:00.964  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-11-01 10:34:00.969  WARN 4232 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-11-01 10:35:40.604  WARN 9128 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:35:40.613  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:35:41.879  WARN 9128 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-01 10:35:43.074  WARN 9128 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:35:43.786  WARN 9128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:35:44.061  WARN 9128 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:35:45.172  WARN 9128 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:35:46.722  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 8.704 seconds (JVM running for 9.78)
+2020-11-01 10:37:03.801  WARN 9128 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604207223801, current=DOWN, previous=UP]
+2020-11-01 10:37:08.714  WARN 9128 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:37:08.717  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:37:09.725  WARN 9128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:37:09.777  WARN 9128 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:37:10.277  WARN 9128 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:37:10.694  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.331 seconds (JVM running for 93.751)
+2020-11-01 10:37:43.852  WARN 9128 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604207263852, current=DOWN, previous=UP]
+2020-11-01 10:37:48.842  WARN 9128 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:37:48.845  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:37:49.849  WARN 9128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:37:49.896  WARN 9128 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:37:50.391  WARN 9128 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:37:50.711  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.186 seconds (JVM running for 133.768)
+2020-11-01 10:38:03.422  WARN 9128 --- [http-nio-1111-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 10:38:58.197  WARN 9128 --- [Thread-25] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604207338197, current=DOWN, previous=UP]
+2020-11-01 10:39:03.120  WARN 9128 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 10:39:03.123  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 10:39:04.068  WARN 9128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 10:39:04.116  WARN 9128 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 10:39:04.620  WARN 9128 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 10:39:04.913  INFO 9128 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.128 seconds (JVM running for 207.971)
+2020-11-01 10:39:13.460  WARN 9128 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 10:39:25.486  WARN 9128 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 10:40:52.699  WARN 9128 --- [http-nio-1111-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 10:43:40.578  WARN 9128 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604207620578, current=DOWN, previous=UP]
+2020-11-01 10:43:40.649  WARN 9128 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RibbonApacheHttpClientConfiguration.connectionManagerTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 10:43:40.650  WARN 9128 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [NFLoadBalancer-PingTimer-logindataprovider] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 11:36:19.448  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:36:19.454  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:36:20.721  WARN 2948 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-01 11:36:21.961  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:36:22.512  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:36:22.699  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:36:23.863  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:36:25.558  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 9.0 seconds (JVM running for 10.154)
+2020-11-01 11:37:26.768  WARN 2948 --- [http-nio-1111-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User With username ace already exist]]
+2020-11-01 11:38:02.269  WARN 2948 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User With username ace already exist]]
+2020-11-01 11:38:20.778  WARN 2948 --- [http-nio-1111-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User With username ace already exist]]
+2020-11-01 11:39:09.105  WARN 2948 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604210949105, current=DOWN, previous=UP]
+2020-11-01 11:39:14.081  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:39:14.084  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:39:15.252  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:39:15.304  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:39:15.899  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:39:16.264  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.588 seconds (JVM running for 180.859)
+2020-11-01 11:39:33.480  WARN 2948 --- [http-nio-1111-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 11:40:34.649  WARN 2948 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211034649, current=DOWN, previous=UP]
+2020-11-01 11:40:39.834  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:40:39.836  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:40:40.903  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:40:40.951  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:40:41.692  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:40:42.108  WARN 2948 --- [http-nio-1111-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 11:40:42.361  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.979 seconds (JVM running for 266.956)
+2020-11-01 11:47:47.494  WARN 2948 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211467494, current=DOWN, previous=UP]
+2020-11-01 11:47:52.370  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:47:52.372  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:47:53.392  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:47:53.443  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:47:53.980  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:47:54.315  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.314 seconds (JVM running for 698.911)
+2020-11-01 11:48:15.541  WARN 2948 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 14
+^[A-Za-z]\w{5, 29}$
+              ^]
+2020-11-01 11:48:49.618  WARN 2948 --- [Thread-30] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211529618, current=DOWN, previous=UP]
+2020-11-01 11:48:54.690  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:48:54.692  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:48:55.709  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:48:55.756  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:48:56.283  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:48:56.632  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.361 seconds (JVM running for 761.227)
+2020-11-01 11:49:12.303  WARN 2948 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 14
+^[A-Za-z]\w{4, 10}$
+              ^]
+2020-11-01 11:49:19.361  WARN 2948 --- [http-nio-1111-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 14
+^[A-Za-z]\w{4, 10}$
+              ^]
+2020-11-01 11:49:45.881  WARN 2948 --- [Thread-38] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211585881, current=DOWN, previous=UP]
+2020-11-01 11:49:50.771  WARN 2948 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:49:50.773  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:49:51.710  WARN 2948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:49:51.779  WARN 2948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:49:52.340  WARN 2948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:49:52.665  INFO 2948 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.256 seconds (JVM running for 817.26)
+2020-11-01 11:50:40.003  WARN 2948 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 10}$
+                 ^]
+2020-11-01 11:50:49.625  WARN 2948 --- [http-nio-1111-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 10}$
+                 ^]
+2020-11-01 11:51:31.189  WARN 2948 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211691189, current=DOWN, previous=UP]
+2020-11-01 11:51:47.555  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:51:47.562  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:51:48.807  WARN 8236 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-11-01 11:51:50.030  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:51:50.546  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:51:50.741  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:51:51.864  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:51:53.406  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 8.496 seconds (JVM running for 9.657)
+2020-11-01 11:52:00.487  WARN 8236 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 10}$
+                 ^]
+2020-11-01 11:52:39.314  WARN 8236 --- [http-nio-1111-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 10}$
+                 ^]
+2020-11-01 11:53:08.511  WARN 8236 --- [Thread-2] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211788511, current=DOWN, previous=UP]
+2020-11-01 11:53:13.746  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:53:13.749  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:53:14.803  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:53:14.863  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:53:15.447  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:53:15.807  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.611 seconds (JVM running for 92.058)
+2020-11-01 11:53:40.906  WARN 8236 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211820906, current=DOWN, previous=UP]
+2020-11-01 11:53:45.953  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:53:45.956  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:53:46.964  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:53:47.020  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:53:47.577  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:53:47.911  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.341 seconds (JVM running for 124.162)
+2020-11-01 11:53:53.626  WARN 8236 --- [http-nio-1111-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 10}$
+                 ^]
+2020-11-01 11:54:45.246  WARN 8236 --- [Thread-18] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211885246, current=DOWN, previous=UP]
+2020-11-01 11:54:48.465  WARN 8236 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-11-01 11:54:50.249  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:54:50.251  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:54:51.182  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:54:51.231  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:54:51.766  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:54:52.092  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.221 seconds (JVM running for 188.344)
+2020-11-01 11:54:58.980  WARN 8236 --- [http-nio-1111-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 18
+"^[A-Za-z0-9]\w{4, 10}$"
+                  ^]
+2020-11-01 11:55:27.688  WARN 8236 --- [Thread-26] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211927688, current=DOWN, previous=UP]
+2020-11-01 11:55:32.683  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:55:32.685  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:55:33.666  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:55:33.715  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:55:34.265  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:55:34.595  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.28 seconds (JVM running for 230.847)
+2020-11-01 11:55:39.553  WARN 8236 --- [Thread-34] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604211939553, current=DOWN, previous=UP]
+2020-11-01 11:55:44.476  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:55:44.478  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:55:45.406  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:55:45.466  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:55:46.034  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:55:46.363  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.272 seconds (JVM running for 242.614)
+2020-11-01 11:55:52.280  WARN 8236 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 17
+^[A-Za-z0-9]\w{4, 29}$
+                 ^]
+2020-11-01 11:57:02.778  WARN 8236 --- [Thread-42] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604212022778, current=DOWN, previous=UP]
+2020-11-01 11:57:07.805  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 11:57:07.807  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 11:57:08.781  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 11:57:08.826  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 11:57:09.365  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 11:57:09.690  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.251 seconds (JVM running for 325.941)
+2020-11-01 11:57:23.579  WARN 8236 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.util.regex.PatternSyntaxException: Unclosed counted closure near index 39
+"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{5, 15}$"
+                                       ^]
+2020-11-01 12:07:23.156  WARN 8236 --- [Thread-50] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604212643156, current=DOWN, previous=UP]
+2020-11-01 12:07:28.053  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 12:07:28.055  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 12:07:28.928  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 12:07:28.976  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 12:07:29.514  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 12:07:29.827  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.147 seconds (JVM running for 946.079)
+2020-11-01 12:07:42.788  WARN 8236 --- [http-nio-1111-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:08:15.326  WARN 8236 --- [http-nio-1111-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:08:26.694  WARN 8236 --- [http-nio-1111-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:09:03.189  WARN 8236 --- [http-nio-1111-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:10:32.866  WARN 8236 --- [Thread-58] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604212832866, current=DOWN, previous=UP]
+2020-11-01 12:10:37.954  WARN 8236 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/userloginservice/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2020-11-01 12:10:37.956  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : No active profile set, falling back to default profiles: default
+2020-11-01 12:10:38.838  WARN 8236 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-11-01 12:10:38.885  WARN 8236 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-11-01 12:10:39.409  WARN 8236 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-11-01 12:10:39.714  INFO 8236 --- [restartedMain] com.cg.UserloginApplication              : Started UserloginApplication in 3.133 seconds (JVM running for 1135.965)
+2020-11-01 12:10:49.729  WARN 8236 --- [http-nio-1111-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:10:54.938  WARN 8236 --- [http-nio-1111-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User email must be in proper format]]
+2020-11-01 12:11:11.064  WARN 8236 --- [http-nio-1111-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 12:11:23.651  WARN 8236 --- [http-nio-1111-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User details cannot be empty]]
+2020-11-01 12:11:34.733  WARN 8236 --- [http-nio-1111-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=User With username drago already exist]]
+2020-11-01 12:11:57.601  INFO 8236 --- [http-nio-1111-exec-8] com.cg.controller.UserLoginController    : drago logged in
+2020-11-01 12:12:09.782  WARN 8236 --- [http-nio-1111-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [UserNotFoundException [message=Invalid username or password]]
+2020-11-01 12:12:26.103  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1604212946103, current=DOWN, previous=UP]
+2020-11-01 12:12:26.195  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RibbonApacheHttpClientConfiguration.connectionManagerTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 12:12:26.196  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [NFLoadBalancer-PingTimer-logindataprovider] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Unknown Source)
+ java.util.TimerThread.run(Unknown Source)
+2020-11-01 12:12:26.197  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-11-01 12:12:26.198  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-11-01 12:12:26.199  WARN 8236 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
