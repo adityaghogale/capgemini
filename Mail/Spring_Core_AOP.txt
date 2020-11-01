@@ -1,0 +1,59 @@
+FAQs
+
+1. What is Spring ?
+   ans - Spring is an application framework. 
+         It has presence in presentation layer, business layer and data layer.
+         It is lightweight, Dependency Injection, Aspect Oriented, Container and Framework.
+
+2. What is Dependency Injection ?
+   ans - If one object is dependent on another then its dependency is given/wired to dependent.
+         eg. Service class dependent on Dao class then Dao object would be provided to Service obj
+         by the Container like Spring.
+
+3. What are types of Dependency Injections in Spring ?
+   ans - a. Setter Injection/property injection  eg <property name="addr" ref="a1"/>
+         b. Constructor Injection                eg <constructor-arg ref="a1" />
+         c. Field Injection			 eg @Autowired directly on instance variable.
+
+4. Lifecycle states through which Spring's bean goes ?
+   ans - Instantiation (either by default constructor or parameterized constructor) ->
+         Populate Properties (calling the setter methods on bean) ->
+         setBeanName() -> setApplicationContext() -> init-method -> destroy-method
+
+5. What are different types of scopes in Spring ?
+   ans - default is "singleton" where only one and one object of bean is created by Spring container.
+         other is "prototype" where new object of bean is created per request. eg context.getBean()
+
+6. Mention a few important Spring Core annotations.
+   ans - @Autowired, @Value, @Component (replacement of <bean> tag), @Configuration (replacement of entire xml)
+         @ComponentScan, @Qualifier, @Primary, @Bean
+
+7. What are the types of Auto wiring in Spring ?
+   ans - byName, byType, constructor (where longest possible matching constructor is called)
+
+8. How to create a Custom Property Editor in Spring ?
+   ans - By writing a new Java class extending from PropertyEditorSupport class. eg PhoneNumberEditor.java
+
+9. What is AOP ?
+   ans - Aspect Oriented Programming. secondary concerns like logging, security are taken away from the primary
+   concerns(business logic) and put into seperate module. That seperate module is an Aspect. So there can be
+   Logging Aspect, Security Aspect etc. And then one or more aspects can be applied to core business component.
+
+10. What are main Spring AOP Terminolgies ?
+   ans - Advice, JoinPoint, PointCut, Proxy and Target
+
+11. What is Advice and which advices are given by Spring AOP ?
+   ans - Advice means what is to be done (eg logging) and when it is to be done (eg before business method).
+   Spring AOP has given - BeforeAdvice, AfterReturningAdvice, AfterThrowingAdvice, AroundAdvice.
+
+12. Which Advice can be viwed as the combination of Before, AfterReturning and AfterThrowing ?
+   ans - Around Advice.
+
+13. Which are important annotations of Spring AOP ?
+   ans - @Aspect, @Before, @AfterReturning, @AfterThrowing, @Around and @PointCut.
+
+14. What is difference between JoinPoint and PointCut ?
+   ans - Joinpoint is superset and Pointcut could be its subset where
+   Joinpoint is theorotical all those points where aspects can be plugged in And
+   pointcut is actually those points where actually aspects are applied.
+

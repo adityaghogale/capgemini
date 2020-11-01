@@ -1,0 +1,53 @@
+FAQs
+
+1. What is ORM ?
+   ans - Object Relational Mapping. 
+   Object Oriented paradiam (java) is different than Relational database design (MySql)
+   There is impedence mismatch. eg Inheritence is there in Object Oriented but Inheritence
+   is not there in database.
+   To bridge this gap beween Object Oriented design and Relational DB design, the frameworks
+   like ORM are developed.
+
+2. Which are known ORM frameworks ?
+   ans - Hibernate, TopLink, iBatis
+
+3. What is JPA ? What is difference between Hibernate and JPA ?
+   ans - Java Persistence API. It is just a specification or standard.
+   Internally it will use either Hibernate or TopLink or iBatis as ORM implementation or Persistence provider.
+   JPA is like concept of Interface (specifications/standard) and 
+   Hibernate is like one of its implementation implementing interfaces provided by JPA.
+
+4. What are differenct Persistent states of an Entity in JPA ?
+   ans - New, Managed, Detached and Removed.
+
+5. Specify important annotations used in Entity class ?
+   ans - @Entity, @Id, @Column
+
+6. What are different annotations used in JPA Association ?
+   ans - @onetoone, @onetomany, @manytoone, @manytomany (3rd extra table created in manytomany)
+         @JoinColumn to establish foreign key.
+
+7. What are the JPA Inheritence strategies ?
+   ans - 3 inheritence strategies are provided by JPA.
+         Single Table, Table Per Class, Joined Table
+
+8. What does JPQL stands for ?
+   ans - Java Persistence Query Language.
+
+9. Name the config file in JPA where database details are mentioned ?
+   ans - persistence.xml
+
+10. Which are important classes and files in JPA ?
+   ans - refer the EntityManagerHelper class
+   EntityManagerFactory object gives us EntityManager object.
+   EntityManagerFactory is thread safe.
+   EntityManger is short lived non thread safe.
+
+
+
+
+
+          
+
+
+

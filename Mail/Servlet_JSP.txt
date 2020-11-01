@@ -1,0 +1,40 @@
+FAQs
+
+1. What are life cycle methods of Servlet ?
+   ans - init(), service(), destroy()
+
+2. Which methods of Servlet you need to override ?
+   ans - doGet() if HTTP GET request needs to be handled
+       - doPost() if HTTP POST request needs to be handled
+
+3. What are different scopes in Servlet from smallest to largest ?
+   ans - request, session, ServletContext (known as application in JSP)
+
+4. What are different scopes in JSP from smallest to largest ?
+   ans - page, request, session, application(same as ServletContext of servlet)
+
+5. What are different ways how Servlets collaborate or interact with each other ?
+   ans - forward, include and sendRedirect
+
+6. What is the name of Deployement Descriptor file in Web application ?
+   ans - web.xml inside WEB-INF folder
+
+7. In Servlet3, which annotation can mark the Java class as a Servlet ?
+   ans - @WebServlet
+
+8. What is MVC ?
+   ans - Its a design pattern known as Model, View and Controller where modularity is added 
+         thus each component carries out different functionality
+         M - Model. A Java class or custom tag handler class
+         V - View. Look and Feel or presentation layer. eg JSP
+         C - Controller. Analyses, validates incoming requests and forwards ahead. eg Servlet
+
+9. What are basic building blocks of JSP ?
+   ans - directives   <%@  %>  eg page, include and taglib
+         scriplets    <%   %>  
+         expressions  <%=  %>
+         declarations <%!  %>
+         comments     <%-- --%>
+
+10. Name a few standard JSLT(JavaServer Pages Standard Tag Library ) tags
+    ans - <c:forEach>, <c:out>, <c:if>

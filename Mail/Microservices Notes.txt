@@ -1,0 +1,1019 @@
+lets break this single monolithic app into multiple small deployable microservices
+Is approach to take to keep app running when one module fails.
+
+
+Characteristic of monolithic(all module bundled with single deployement unit )
+
+1> All modules bundles in one deployment unit
+2>All modules written in same language
+3>All modules share the same Database
+4>All modules run in same process
+
+
+is similar to big component where all modules are gathered and tightly coupled as a single unit.
+
+
+
+Limitations of monolithic
+--------------------------------
+1> Unscalable :-(scalability:- For any no. of user consistent responce is given i.i even if load increases behavoiur is not changed)
+	if no. of users increase drastically app may not give same result.
+
+2>Inflexible
+	entire app may need to be developed in same language.So changes are not accepted easily. i.e. it is Tightly Coupled
+
+3>Unreliable
+	If one feature fails entire system fails.
+	small is can be harmfull for whole application.
+
+4>Slow Development
+	parallel development is impossible as everything is bundled into single unit.
+
+5>Tightly Coupled
+	They use single database system,server,everything is shared
+
+
+=======================================================================================================================================
+
+In mocroservice
+individually you can increase the instances of a particular service or decrease instances of that particular service
+as they are independent
+
+A monolithic application is decomposed into small tiny micro applications which are packaged and deployed independently.
+==========================================
+Micro services are
+
+a.     Services exposed by Rest
+
+b.     Small deployable units
+
+c.     Cloud enabled
+==========================================
+
+A micro service anatomy  is
+ it will have its    
+Own data.
+    
+Own logic.
+   
+Own bounded context
+  (andar kya hona chahiye ky nahi hona)  
+Public API GET (give public API so others can call it)
+    
+Nothing shared (nothing is shared between services)
+
+===========================================================
+
+High cohesion means loosely coupling
+i.e. only related data is present in class/model.
+
+======================================
+Advantages of microservices :-
+=======================================
+	Independent Development
+
+	Independent Deployment
+
+	Fault Isolation
+
+	Mix Technology Stack
+
+	Scaling
+
+	Loose coupled
+
+====================================================
+challenges in designing microservice architecture
+======================================================
+
+ > Bounded Context: what to do in each micro service and what  not to do. how to identify boundary for each micro service.
+
+ > Configuration Management: Lot more work for Operations due to lot of configurations. 
+	E.g. 10 Microservices with 5 Environments(DEV,QA,PROD) with 15 instances. ()
+
+ > Dynamic scale up and scale down: e.g. policy bazar.
+search - more people - individual scaling would help
+
+ buy - less people
+ 
+
+ > Visibility: how to identify where the bug is in case of 10 Microservices
+It needs automated monitoring around Microservices.
+
+ > Pack of cards: fault tolerance is important as if one important    
+MS fails then entire app may collapse.
+
+======================================================================================================================================
+
+MS design Principles
+
+high cohesion
+autonomous
+business domain centric
+resilience
+observable
+automation 
+
+
+============================================
+
+SOLID principle (https://java2blog.com/solid-principles-java/)
+
+S > Single Responsibility Principle (apne classs ko ek time pe ek responsibility dena i.e. It will do only one responsibility at a time)
+
+O > Open Closed Principle (soft. component should be open for extension but closed for modification) i.e. don't change core logic but you can extend it.
+
+L > Liskov's Substitution Principle (every sub class or a derived class should be substitutable for parent/base class)
+
+I > Interface Segregation Principle (Seperate interface for seperate contract) i.e. avoid adding unnecessary methods or functionlities in single interface. Make it more functionility oriented
+
+D > Dependency Inversion Principle (depends on abstraction not on concrete) 
+
+===========================================================================
+
+12 factor app (https://12factor.net/)
+
+1. Codebase - one codebase, multiple deploys. This means you must not have various codebase for various versions i.e. our main code
+		(a codebase (or code base) is a collection of source code used to build a particular software system, application, or software component.)
+
+2. Dependencies - you must put as many dependencies in your manifests (e.g. pom.xml in Maven) as possible.
+
+3. . Config - Store config in the environment. never commit your environment-specific configuration (most importantly: password) in the source code repo
+
+    
+		Apps sometimes store config as constants in the code. 
+		This is a violation of twelve-factor, which requires strict separation of config from code. 
+		Config varies substantially across deploys, code does not.
+
+4. Backing Service - Treat backing services as attached resources
+
+5. Processes - Execute the app as one or more stateless processes.
+
+6. Port binding - Export services via port binding.
+
+7. Concurrency - Scale out via process model. this is all about scalability.
+spring cloud config server
+8. Disposability - Maximize robustness with fast start up and graceful shutdown.
+
+ Graceful shutdown is about leaving the system in a correct state 
+
+9.run
+
+10.release
+
+11. Dev Prod Parity - Keep development, staging, and production as similar as possible.
+
+12. Logs - treat logs as a event streams.
+
+
+==========================================================================
+
+
+Solution to challenges in MS(Configuration Management)
+
+spring cloud config server
+
+===================================================
+
+
+Solution to challenges in MS(Dynamic scale up and scale down)
+
+Naming server(Eureka)
+Ribbon(Client side load balancer)
+Feign(Easier REST client)
+
+======================================================
+
+If client is java class we use REST template.
+
+=======================================================
+
+
+Solution to challenges in MS(Fault Tolerance)
+
+Hystrix
+
+========================================================
+
+Dependencies used in Spring Starter Package
+
+DevTools - picks the changes without needing to restart the server
+
+Actuator - Monitoring capabilities around application
+Config 
+Client - To connect to SpringCloudConfigServer.
+Web -  @RestController comes from this.
+
+
+spring.application.name in application.properties is used when we register spring
+
+=============================================================================================================================
+
+MS starts from here
+-----------------------
+
+Solution to configuration Management
+--------------------------------------
+
+spring starter package
+dependencies(devtools,actuator,client,web)
+create controller
+configuration class to decide no. of instance(LimitConfiguration)
+
+
+Create new Spring Project (spring-cloud-config-server)
+dependencies(dev tools, config server)
+
+
+Create localfolder for storing git
+
+To Connect spring-cloud-config-server to a local GIT repository
+1. 
+-----------------------------------------------------------------
+install git - https://git-scm.com/
+ 
+
+Create a new folder localrepo, 
+
+cd  inside it and give command
+   git init
+ 
+
+Select spring-cloud-config-server project in STS, and right click
+   Build Path -> Source -> Link Source and select folder localrepo
+
+
+Select folder localrepo in STS and create a new property file 
+limits-service.properties
+
+Make entry in property file like( limits-service.minimum=88
+  limits-service.maximum=888)
+
+go the cmd - inside localrepo
+    and give commands
+git add .
+   
+git commit -m "first commit"
+
+
+Come to sts config-serve proj
+goto LocalRepo folder and copy paste same properties file twice with change in name like
+
+limits-service-dev.properties
+
+limits-service-prod.properties
+
+inside application.properties file of spring-cloud-config-server
+make entry (spring.cloud.config.server.git.uri=file://D://LocalRepo)  i.e. git repository address
+
+
+Now in application.properties of limit-service project make entry
+spring.cloud.config.uri=http://localhost:5555   
+spring.profiles.active=dev
+
+the same file i.e. application.properties of limit-service project  just RENAME it to bootstrap.properties
+
+Now create new java class in limit-service project (Configuration.java) 
+give annotation on top of class as
+@Component
+@ConfigurationProperties("limits-service")
+
+
+Now come to controller and add
+	@Autowired
+ 	private Configuration configuration;
+
+Also change return of retrieveLimitsFromConfigurations() to
+return new LimitConfiguration(configuration.getMaximum(),configuration.getMinimum());
+
+==================================================================================================================================
+
+
+Solution to Dynamic Scale Up and Scale Down
+----------------------------------------------
+
+consumer will ask Eureka server to give all current instances of provider service.
+consumer use Feign to write simple REST service to give call to instance.
+
+VM arguments we will override server.port of application.properties
+Two instances of producer service should run on different ports.
+
+
+
+Create new Spring starter project(currency-exchange-service)
+add dependecies(Web, DevTools, Actuator, Config Client, Data JPA, H2 Database)
+
+Create CurrencyExchangeController class with @RestController annotation
+and methods in controller
+@GetMapping("/currency-exchange/from/{from}/to/{to}") 
+	public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to) 
+	{ 
+		//ExchangeValue exval=new ExchangeValue(1000L,from,to,BigDecimal.valueOf(70));
+		ExchangeValue exval=repository.findByFromAndTo(from, to);
+		//exval.setPort(Integer.parseInt((env.getProperty("local.server.port"))));
+		exval.setPort(8000);
+		
+		return exval;
+	}
+
+
+
+create class ExchangeValue with instance variables
+	private long id;
+	private String from;
+	private String to;
+	private BigDecimal conversionMultiple;
+	private int port;
+
+now in app.prop give
+server.port=8000
+spring.application.name=currency-exchange-service
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+
+
+Now execute with url(http://localhost:8000//currency-exchange/from/USD/to/INR) see o/p
+
+
+now create data.sql in resource folder and ADD
+insert into exchange_value(id,currency_from,currency_to,conversion_multiple,port) values (10001,'USD','INR',70,0);
+
+insert into exchange_value(id,currency_from,currency_to,conversion_multiple,port) values (10002,'EUR','INR',80,0);
+
+insert into exchange_value(id,currency_from,currency_to,conversion_multiple,port) values (10003,'AUD','INR',50,0);
+
+
+create interface ExchangeValueRepository extend JpaRepository<ExchangeValue, Long>
+
+add method signature like
+public ExchangeValue findByFromAndTo(String from, String to);
+
+Add
+@Autowired
+	private ExchangeValueRepository repository;
+in controller class
+
+
+In ExchangeValue class give annotations @Entity and all
+
+run project
+
+
+use earlier URL to access updated
+
+
+to access Local H2 in memory use URL (http://localhost:8000/h2-console/)
+
+================================================================================================================
+TO 2 instances which will run on different different ports
+
+right click > run as > run config. >select argument tag > VM arguments > write (-Dserver.port=8001) in VM arguments
+
+In name add -8001 like (currency-exchange-service-8001-CurrencyExchangeServiceApplication )
+
+Add new configuration with port value as -8002
+
+now run both of them
+
+========================================================================================
+
+Create new spring project (currency-conversion-service)
+
+dependencies (Web, DevTools, Actuator, Config Client)
+
+in app.prop give
+server.port=8100
+spring.application.name=currency-conversion-service
+
+create controller(CurrencyConvertorController) with method
+@GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
+	public CurrencyConversionBean convertCurrency(@PathVariable String from, @PathVariable String to,
+	            @PathVariable BigDecimal quantity) {   }
+
+
+
+create new class (CurrencyConversionBean) with instance varibales
+private Long id;
+
+private String from;
+ 
+private String to;
+ 
+private BigDecimal conversionMultiple;
+ 
+private BigDecimal quantity;
+ 
+private BigDecimal totalCalculatedAmount;
+
+private int port;
+
+create getter setter and const.
+
+
+
+
+now in controller method add this
+
+String url = " http://localhost:8001/currency-exchange/from/{from}/to/{to}"; 
+Map<String,String> uriVariables = new HashMap<>(); 
+uriVariables.put("from", from); uriVariables.put("to", to);
+ResponseEntity<CurrencyConversionBean> respEntity =
+ new RestTemplate().getForEntity(url,CurrencyConversionBean.class,uriVariables);
+     
+CurrencyConversionBean bean = respEntity.getBody();
+return new CurrencyConversionBean(bean.getId(),from,to,bean.getConversionMultiple(), quantity,quantity.multiply(bean.getConversionMultiple()),bean.getPort());
+
+
+
+in controller of Exchnage service write
+@Autowired
+ private Environment env;
+
+in method
+exval.setPort(Integer.parseInt(env.getProperty("local.server.port")));
+
+================================================================================================================================================
+
+Feign - Easier Rest Client ( alternative to RestTemplate )
+
+Ribbon - client side load balancer.
+
+Eureka - Naming server to which all our micro services would register themselves.
+
+
+Now give annotation @EnableFeignClients("com.cg.demo")
+on top of @SpringBootApplication of consumer project i.e. CurrencyConversionServiceApplication
+
+
+To download its jar add dependency tag in pom.xml
+	<dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-openfeign</artifactId>
+ 	</dependency>
+
+
+Now create new interface like (CurrencyExchangeServiceProxy)
+with method
+public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
+
+
+Now give annotation on interface as
+@FeignClient(name="currency-exchange-service", url="http://localhost:8001")
+
+
+Give annotation on method of interface as
+@GetMapping("/currency-exchange/from/{from}/to/{to}")
+public CurrencyConversionBean retrieveExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
+
+now give 
+@Autowired
+	private CurrencyExchangeServiceProxy proxy;
+in controller of same project.
+
+
+
+
+Now comment all code in method except return statement and add
+
+CurrencyConversionBean bean = proxy.retrieveExchangeValue(from, to);
+
+above return statement.
+
+
+
+now run code and see o/p
+==================================================================================
+
+
+for use of ribbon
+
+add 
+<dependency>
+              
+ <groupId>org.springframework.cloud</groupId>
+              
+ <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+ 
+</dependency>
+
+in pom.xml of consumer service i.e. CurrencyConversionService
+
+
+now in CurrencyExchangeServiceProxy  interface add annotaion
+@FeignClient(name="currency-exchange-service") i.e. remove static url
+also add
+@RibbonClient(name="currency-exchange-service") 
+just below Feign Client
+
+
+
+now open application.prop and add
+currency-exchange-service.ribbon.listOfServers=http://localhost:8001,http://localhost:8002
+i.e. list of ports avaible of provider
+
+=====================================================================================================
+
+HOW TO SET UP OUR EUREKA NAMING SERVER
+
+
+
+First Create component of Eureka naming server i.e.
+
+create spring project like(netflix-eureka-naming-server)
+with dependencies (Eureka Server, Config Client, DevTools, Actuator)
+
+now below @SpringBootApplication give 
+@EnableEurekaServer
+in new Project
+
+
+in app.prop make entries
+server.port=9768
+spring.application.name=netflix-eureka-naming-server
+
+
+now to start replica port we make one entry in app.prop
+eureka.client.serviceUrl.defaultZone=http://localhost:9768/eureka
+
+use http://localhost:9768/ to view Eureka UI
+
+
+now open pom.xml of (CurrencyExchangeServiceApplication)
+below h2 dependency add
+
+<dependency>
+            
+<groupId>org.springframework.cloud</groupId>
+            
+<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+ 
+</dependency>
+
+
+after that come to main method and add annotation
+@EnableDiscoveryClient
+
+now in app.prop add
+
+eureka.client.serviceUrl.defaultZone=http://localhost:9768/eureka
+
+
+
+
+Now repeat same process for CurrencyConversionServiceApplication i.e.
+in dependency add
+
+<dependency>
+            
+<groupId>org.springframework.cloud</groupId>
+            
+<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+ 
+</dependency>
+
+
+after that come to main method and add annotation
+@EnableDiscoveryClient
+
+
+now in app.prop add
+eureka.client.serviceUrl.defaultZone=http://localhost:9768/eureka
+
+comment hardcoded entries of ports
+#currency-exchange-service.ribbon.listOfServers=http://localhost:8001,http://localhost:8002
+
+
+Now run them in sequence
+eureka   >  exchange  >  conversion
+
+
+Now access service with url of 
+conversion i.e. (http://localhost:8100/currency-converter/from/AUD/to/INR/quantity/10)
+
+
+=============================================================================================
+
+In app.prop of Eureka project add entries
+
+eureka.client.register-with-eureka=false
+
+eureka.client.fetch-registry=false
+
+now reexecute everything in same order 
+
+now without stopping anything if add new configuration of exchange service and run it..it will be registered in eureka seer and will be displayed in port
+this is dyanamic up scaling
+
+for dyanmic down scaling we will stop any one configuration of exchange service. 
+
+===================================================================================================
+
+Now we solve issue of fault tolerance
+
+jars starting with jackson* are responsible for conversion java-json or vice versa
+
+ 
+we use limit-service and server-cloud-config
+
+
+
+open controller of limits-service
+add method
+public LimitConfiguration retrieveConfigurations() {       
+   
+     throw new RuntimeException("Not Available");
+ 
+}
+
+give annotation
+@GetMapping(path = "/limits-fault-tolerant")
+
+
+now open pom.xml of limits-service and add
+
+<dependency>
+           
+ <groupId>org.springframework.cloud</groupId>
+            
+<artifactId>spring-cloud-starter-hystrix</artifactId>
+          
+  <version>1.4.7.RELEASE</version>
+
+</dependency>
+
+
+Now in Application class give annotation
+@EnableHystrix
+
+Now come back to your controller class
+below newly created method (retrieveConfigurations()) add
+@HystrixCommand(fallbackMethod="alternateMethod")
+
+
+also add i.e. body of our fallback method
+public LimitConfiguration alternateMethod() {   
+       
+ System.out.println("inside alternateMethod");
+       
+       
+ return new LimitConfiguration(510,0);
+ 
+}
+
+
+now access it by url (http://localhost:4444/limits-fault-tolerant)
+
+
+Hystrix follow circuit breaker pattern i.e. if something unexpected happens it will redirect flow so application wont crash.
+
+--------------------------------------------------------------------
+
+For logging
+
+LoggerFactory will return Logger 
+Import them org.slf4j.* package
+
+
+now come to controller class and add
+private static final Logger logger = LoggerFactory.getLogger(LimitsConfigurationController.class);
+
+
+open bootstarp.prop and add
+logging config
+logging.level.root=WARN
+logging.level.com.cg=INFO
+logging.file=./src/main/resources/logfile.log
+
+
+now in Controller of limits-service in alternateMethod add
+logger.info("Due to Exception, the fallbackmethod is called by Hystrix");
+
+
+
+More Info about logger(https://howtodoinjava.com/spring-boot2/logging/logging-application-properties/)
+
+----------------------------------------------------------------------------------
+
+To implement Swagger
+
+Producer has come up with very useful REST ful web service.
+How all other clients / consumers are going to understand exact usage of REST apis ???
+what is the URL? which parameters it is taking ?? What would be return type of the particular REST api ? 
+What would be the possible status codes/error codes returned by that particular REST api ??
+
+all this things consumer/client need to understand then only they can call our service all things.
+
+Documenting all above required information about REST api ,if this is tha challenge? then solution is Swagger
+
+to add swagger in our project 
+
+
+open pom.xml od limits-service  and add
+
+<dependency>
+           
+<groupId>io.springfox</groupId>
+          
+<artifactId>springfox-swagger-ui</artifactId>
+          
+<version>2.9.1</version>
+          
+</dependency>
+
+ 
+
+          
+<dependency>
+          
+<groupId>io.springfox</groupId>
+        
+<artifactId>springfox-swagger2</artifactId>
+       
+<version>2.9.1</version>
+           
+</dependency>
+
+
+now open main method class of limits-service and give annotation
+@EnableSwagger2
+
+Now in same we have to register docket 
+for that add method in main class
+
+@Bean
+    public Docket swaggerConfiguration() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                   .select()
+                   .paths(PathSelectors.any())
+                   .apis(RequestHandlerSelectors.basePackage("com.cg.demo"))
+                   .build()
+                   .apiInfo(myApiInfo());
+    }
+
+
+
+Now we have to add myApiInfo() in main class
+
+private ApiInfo myApiInfo() {
+        // for version 2.9.1
+        ApiInfo apiInfo=new ApiInfo(
+                "SPRING WITH SWAGGER API",
+                 "API CREATION",
+                 "1.0",
+                 "Free to Use",
+                 new Contact("Aditya-san","/limits" ,"reaper@nomail.com"),
+                 "API licence",
+                 "/limits",
+                 Collections.emptyList());
+        return apiInfo;  
+     }
+
+import from springfox only
+import springfox.documentation.service.Contact;
+
+
+
+Now open your controller 
+on top of class give
+@Api(value="LimitConfiguration demo using logger and swagger")
+
+
+now on top of method with mapping "/limits" give
+@ApiOperation(value = "retrieveLimitsFromConfigurations", nickname = "retrieveLimitsFromConfigurations")
+    @ApiResponses(value = {
+               @ApiResponse(code = 200, message = "Success", response = LimitConfiguration.class),
+               @ApiResponse(code = 500, message = "Failure", response = LimitConfiguration.class)})
+
+
+add new method in controller as
+@GetMapping(path = "/limits/{max}/{min}")
+    @ApiOperation(value = "retrieveLimitsFromParameters", nickname = "retrieveLimitsFromParameters")
+    public LimitConfiguration retrieveLimitsFromParameters(@PathVariable("max") int max,@PathVariable("min") int min) {
+        return new LimitConfiguration(max,min);
+    }
+
+
+Just below @HystrixCommand we have to give
+@ApiOperation(value = "retrieveConfigurations", nickname = "retrieveConfigurations")
+	 @ApiResponses(value = {
+	               @ApiResponse(code = 200, message = "Success", response = LimitConfiguration.class),
+	               @ApiResponse(code = 500, message = "Failure", response = LimitConfiguration.class)})
+
+
+if we want json of everything (http://localhost:4444/v2/api-docs) use this
+
+
+For swagger UI use (http://localhost:4444/swagger-ui.html)
+
+
+============================================================================================================
+
+Now we apply authentication
+
+
+
+in pom.xml of limits-service add
+<!--  Security starts  -->
+           <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+<!--  Security ends  -->
+
+
+Now we create new java class MyWebSecurity that extends WebSecurityConfigurerAdapter
+
+
+now we will override 2 methods like
+
+@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		
+	}
+
+here AuthenticationManagerBuilder we are using is InMemoryAuthentication that can access our rest service
+so in our method add
+
+System.out.println("inside configureGlobal of SecurityConfig");
+auth.inMemoryAuthentication().withUser("admin").password("{noop}admin").roles("USER");
+
+
+2nd method is
+@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		
+	}
+
+and add in 2nd method
+http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+
+
+on top of class give annotation
+@EnableWebSecurity
+
+==================================================================================================================
+
+Authentication via google
+
+
+Use url (https://console.cloud.google.com)
+
+Select API and services from left hand side >  then credentials
+
+Now create one project
+
+After project is created . Select create credentials
+ 
+select oAuth consent Id > go to oAuth Consent Screen
+
+select External and create > give name anything (anything we create will be available for one day only) > click on create
+
+
+Now click on edit app link ( we can manipulate our data)
+
+
+Now select creadentials it will take us to Project page.
+
+
+Click create credentials and select oAuth client ID
+select web app and dont change anything  and save client info. after this we will get
+
+
+Client Id : 844427545536-c6npnp5n1ti0jg99g8je3c4ev5udndmo.apps.googleusercontent.com
+Your Client Secret : CIU_gtGX31Kl73R0MjmdRa83
+
+
+Now select Web Client 1 new page will open
+
+Click on add URI of Authorized Javascript origins
+
+In URI give (http://localhost:4444)
+
+
+Now in authorized redirect URI
+
+click add URI
+ and give (http://localhost:4444/login)
+
+again click on add uri and add
+( http://localhost:4444/login/)
+
+
+
+
+
+Now come back to sts
+
+In bootstrap.prop add (Dont give spaces)
+
+security.oauth2.client.clientId = 844427545536-c6npnp5n1ti0jg99g8je3c4ev5udndmo.apps.googleusercontent.com
+security.oauth2.client.clientSecret=CIU_gtGX31Kl73R0MjmdRa83
+
+security.oauth2.client.accessTokenUri=https://www.googleapis.com/oauth2/v3/token
+security.oauth2.client.userAuthorizationUri=https://accounts.google.com/o/oauth2/auth
+security.oauth2.client.tokenName=oauth_token
+security.oauth2.client.authenticationScheme=query
+security.oauth2.client.clientAuthenticationScheme=form
+security.oauth2.client.scope=profile email
+security.oauth2.resource.userInfoUri=https://www.googleapis.com/userinfo/v2/me
+security.oauth2.resource.preferTokenInfo=false
+
+
+Now come to MyWebSecurity.java in below method comment existing code and add
+configure(HttpSecurity http){
+
+http.csrf().disable().antMatcher("/**").authorizeRequests().antMatchers("/", "/limits", "/index.html")
+				.permitAll().anyRequest().authenticated();
+}
+
+
+
+Now in pom.xml add
+
+<!-- Outh2 starts -->
+       
+        <dependency>
+               <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+           </dependency>
+    <!-- Outh2 ends -->
+
+
+now in MyWebSecurity on top of class give annotation
+
+@EnableOAuth2Sso
+
+
+
+
+Now in limits controller add
+
+@GetMapping(path = "/limits-oauth2")
+    public String restricted() {
+        return "this is the restricted string but you are authorized to get it";
+    }
+
+
+@RequestMapping("/user")
+    @ResponseBody
+    public Principal user(Principal prince) {
+        return prince;
+    }
+
+
+import principle form java.security.principle
+
+now use url (http://localhost:4444/limits-oauth2) to access
+
+
+============================================================================
+database patterns in MS
+    4 types
+	seperate DB per service
+	
+	shared DB per service
+	
+	Saga pattern
+	
+	CQRS pattern
+
+Orchestration vs Choreography
+https://www.youtube.com/watch?v=cYENNwDK2dA
+
+choreography saga based
+https://www.youtube.com/watch?v=1gbPZ63XKok
+
+1. https://www.youtube.com/watch?v=WnZ7IcaN_JA
+
+2. https://www.youtube.com/channel/UCB12jjYsYv-eipCvBDcMbXw
+
+3. https://itnext.io/microservices-architecture-an-implementation-of-saga-pattern-dbbe5d881c78
+
+
+The two major features provided by Spring Boot Actuator are
+ 
+1. Providing Management Endpoints to Spring Boot Applications.
+2. Spring Boot Applications Metrics.(provide to check status of service or health of service i.e. what beans are used and all)
+
+
+To check this add entry in bootstrap.prop
+
+management.security.enabled=false
+
+
+
+=============================================================================================================================
+
+
+
+Agile methodolgy  and DevOps culture
+
+Go through Problem Statements
+	
+Front End - SPA - Angular
+	
+Middleware - Think in terms of microservices developed using Boot and Rest
+	
+Adhere to Agile methodology
+	
+work in DevOps culture

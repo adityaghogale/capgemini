@@ -1,0 +1,118 @@
+FAQs
+
+1. Which design patterns are implemented in Spring MVC module ?
+   ans - MVC design pattern and Front Controller design pattern.
+
+2. Which are main components in Spring MVC Architecture ?
+   ans - DispatcherServlet, HandlerMapping, Controller, ModelAndView, ViewResolver, View
+
+3. Which component is acting as a FrontController in Spring MVC ?
+   ans - DispatcherServlet
+
+4. Which are important annotations used in Spring MVC ?
+   ans - @Controller, @RequestMapping, @RequestParam, @ModelAttibute, @Valid
+
+5. How validations can be done in Spring MVC ?
+   ans - 2 ways - programmatic approach and annotations approach.
+   programmatic - write a Java class implementing Validator interface. (eg EmployeeValidator)
+   annotations - @Valid, @Size, @NotEmpty
+
+6. Can we write business logic inside Controller of MVC ?
+   ans - Controller is also a Java class so theorotically we can add business logic but as per
+         good design we are NOT going to add any business logic directly in the Controller class.
+         Controller will give call to Service and in this Service class there should be business logic.
+         Service will give call to Dao and in this Dao all the communication with Database will take place.
+         Therefore, Dependency Injection should take place as below 
+         Dao injected inside Service and the Service injected inside Controller, Thus the flow of execution
+         would be DispatcherServlet -> Controller -> Service -> Dao -> database.
+
+7. How can we integrate Spring and JPA ?
+   ans - define LocalContainerEntityManagerFactoryBean in spring's xml also
+         define JpaTransactionManager in spring's xml and
+         Inject/wire directly EntityManager inside the Dao class with @PersistenceContext annotation.
+
+8. What are implementation steps of Spring Data JPA ?
+   ans - In case of Spring Data JPA, simply write an Interface extending from JpaRepository and 
+         all the CRUD implementing methods would be automatically implemented. eg save(), findById()
+
+9. What are different ways of creating a Spring Boot project ?
+   ans - using the STS - spring starter project
+         by spring initialzr web site - http://start.spring.io
+
+10. Name the main annotation provided in Spring Boot ?
+    ans - @SpringBootApplication which is combination of 3 annotations namely
+    @SpringBootApplication = @Configuration, @EnableAutoConfiguration and @ComponentScan
+
+11. What is benefit of Spring Boot ?
+    ans - To develop spring application very fast without worrying about all the jars and its dependencies.
+         its like bootstrapping your application very fast. It uses Maven and in pom.xml dependencies are listed.
+         Because of Starter projects, even after adding a single dependency in pom.xml, all the relevant and
+         required jar files are downloaded and added into classpath.
+   
+         Spring Boot Web application also can be packaged as a Jar file and it will have its OWN embedded HTTP server.
+
+12. Can we change the default port of embedded server which comes with Boot ?
+    ans - Yes. Spring Boot comes with its own embedded HTTP server and it runs on default port of 8080.
+         one can change this by adding a property  server.port=9999  in the application.properties file inside resources
+         folder.
+
+13. What is a web service ?
+    ans - Software system designed to support interoperable machine-to-machine interaction over a Network.
+          3 key features every web service posses.
+	     1. Designed for machine-to-machine or (application-to-application) interaction
+	     2. Should be interoperable - Platform Independent
+             3. Should allow communication over a Network.
+
+    	   Hows?
+             1. How does data exchange between applications take place ? request and response
+             2. How to make platform independent ? request and response should be platform independent
+                e.g JSON or XML.
+             3. How consumer will know the format of request and response ? solution is service defn
+                Service Definition - a. Req Resp format
+        			     b. Request structure
+				     c. Responce structure
+				     d. Endpoint
+
+14. How many types of Web Services are there ?
+    ans - 
+     1. (Jax-WS) SOAP based - It possess restriction on format of XML which is exchanged between provider and consumer. XML is used as req exchange format.
+                     SOAP Envelop - SOAP Header and SOAP body.
+                             a. Format : SOAP XML request, SOAP XML response
+                             b. Transport : SOAP over MQ, SOAP over HTTP
+			     c. Service Definition : WSDL. (Web Service Description Langauge) XML
+                                 WSDL defines - i.   Endpoint : where the service is exposed at
+						ii.  All Operations : all operations that are allowed
+						iii. Request Structure : for every operation, defines 									req. structure
+						iv.  Response Structure : for every operation, defines
+									resp. structure
+
+     2. (Jax-RS) REST styled - It provides architectural approach. [REpresentational State Transfer]
+		      Request and Response between Browser and Server are in HTTP format.
+                      HTTP methods
+			      i.  GET - I am trying to get something
+                              ii. POST - I am trying to create something
+			      iii.PUT -  I am trying to update something
+                              iv. DELETE - I am trying to delete something
+                              HTTP status codes
+                              i. 200 - successful
+                              ii.404 - resourse not found
+ 
+                              Key abstraction - RESOURCE. You have to think in terms of Resources.
+			      1. A resource has an URI (Uniform Resource Identifier)
+					/user/Amit/todos/1 - first todo of Amit is resource
+					/user/Amit/todos   - List of all the todos of Amit is resource
+					/user/Amit 	   - The user Amit is a resource
+
+			      2. A resource can have different representations
+						XML, HTML, JSON
+
+			      REST
+			      a. Format : No restriction JSON is popular
+			      b. Transport : only HTTP
+			      c. Service Definition : No standard. WADL/Swagger etc
+
+15. Name a few important annotations used in Spring RESTful application ?
+    ans - @RestController, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PathVariable
+
+16. Name a few important annotations used in Exception Handling code of rest service ?
+    ans - @ResponseStatus, @ControllerAdvice, @ExceptionHandler

@@ -1,0 +1,173 @@
+apache is server program that listens client and returns appropriate service.
+
+
+Web container is something where deploy app.
+
+JSP-   Java Server Page
+
+
+to display data on user screen from servlet we use JSP.
+
+Our servlet > HttpServlet > GenericServlet > Servlet(Interface)
+
+
+life cycle of servlet
+
+init > service > destroy
+
+web.xml is entry point of every servlet.
+
+
+@WebServlet on servlet class we use to replace <servlet> in web.xml
+
+by default method of form is GET
+
+
+PrintWriter is use to write on browser
+
+ServletConfig is used to to init-params of each servlet
+
+ServletContext is sused to get contxt value in servlet
+
+to send one value to another servlet we use
+request.setAttribute() and set values.
+
+Request Dispatcher is used to transfer control.
+
+we can use three approaches here
+forward,include,sendRedirect
+
+taglib we can use to create user defined tags or predefined tags.
+
+
+Enumeration simple collection where key/value is used.
+first key by default is zero.
+
+
+
+
+
+---------------------------------------------
+
+OneToOne 
+
+class who have  @JoinColumn annotation is realtionship owner.
+
+@Entity
+@Table
+@Id
+@Column
+
+---------------------------------------------------
+
+@Bean
+@Component
+@Configuration
+@ComponentScan(basePackage)
+@Primary 
+@Qualifier is in javax package
+
+@Resource is in spring package
+
+
+Injection is way to set values.
+
+setter injection is when we use <property>
+
+constructor injection
+
+
+attribute autowire
+
+byName,byType,constructor
+
+--------------------------------
+
+Pojo
+
+lifecycle
+
+
+propetyset methods > constructor/init > afterPropertySet >...> service  > Destroy
+
+
+BeanPostProcessor
+------------
+if we want to perform something befor or after initialization of bean.
+
+
+@Primary 
+
+agar ye diya honga toh 2 bean hote hue bhi error nahi aata
+
+
+---------=====================
+
+
+AOP
+
+
+@Aspect
+ye batata ki ye class ki help se dusre class me logging karna hai
+
+
+@Before
+@After
+@AfterReturning
+@Around
+
+
+==================================
+
+@ModelAttribute
+
+=============================================================================================
+
+
+@OnetoOne
+
+Every entity is independent
+
+
+@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn
+	private Address addr
+
+@JoinColumn will add column of address as a foreign key in employee table.
+Text in OneToOne will make sure that when employee is deleted his respective addres is also deleted.
+
+@javax.persistence.OneToOne(mappedBy="addr")
+	private Employee emp;
+
+mappedBy="addr" means Address table is connect to addr instance variable of Employee class.
+
+=============================================================================================
+
+@OneToMany
+
+@OneToMany(targetEntity=Employee.class, mappedBy="department")
+private List<Employee> employees;
+
+targetEntity will direct class on which relationship is to apply.
+mappedBy will set instance name of employee class to communicate
+
+@ManyToOne
+private Department department;
+
+================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
